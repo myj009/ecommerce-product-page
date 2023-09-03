@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./dist/main.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <script src="./script.js" defer></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="flex flex-col w-full md:px-16 lg:px-24 xl:px-36">
+    <header
+      class="flex my-5 md:my-10 justify-between items-center mx-6 md:mx-0"
+    >
+      <div class="flex items-center">
+        <button
+          class="mobile-nav-toggle md:hidden mr-6 z-50"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        ></button>
+        <img class="mr-6 md:mr-10" src="./images/logo.svg" alt="" />
+        <nav class="flex font-normal text-dark-grayish-blue">
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex flex-col md:flex-row gap-5 md:gap-8 z-40"
+          >
+            <li class="active-nav nav-link">
+              <a href="#">Collections</a>
+            </li>
+            <li class="nav-link">
+              <a href="#">Men</a>
+            </li>
+            <li class="nav-link">
+              <a href="#">Women</a>
+            </li>
+            <li class="nav-link">
+              <a href="#">About</a>
+            </li>
+            <li class="nav-link">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex space-x-8 items-center">
+        <button class="main-cart relative">
+          <div class="cart-item-quant hidden">0</div>
+          <img class="w-5 h-5" src="./images/icon-cart.svg" alt="cart" />
+        </button>
+        <button class="">
+          <img
+            class="w-12 aspect-square hover:border-orange border-2 rounded-full"
+            src="./images/image-avatar.png"
+            alt="profile"
+          />
+        </button>
+      </div>
+    </header>
+    <div class="h-0.5 w-full bg-light-grayish-blue"></div>
+    <div
+      class="flex flex-col md:grid md:w-full md:grid-cols-2 md:grid-rows-1 md:py-12 md:gap-10 lg:gap-24 md:px-8 lg:px-16 xl:px-36"
+    >
+      <div class="hidden md:grid grid-cols-4 grid-rows-5 gap-5 col-span-1">
+        <div class="col-span-4 row-span-4">
+          <img
+            class="w-full rounded-2xl main-image"
+            src="./images/image-product-1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-span-1 row-span-1 rounded-xl active-image-div">
+          <img
+            class="thumbnail w-full rounded-xl"
+            src="./images/image-product-1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-span-1 row-span-1 rounded-xl">
+          <img
+            class="w-full thumbnail rounded-xl"
+            src="./images/image-product-2.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-span-1 row-span-1 rounded-xl">
+          <img
+            class="w-full thumbnail rounded-xl"
+            src="./images/image-product-3.jpg"
+            alt=""
+          />
+        </div>
+        <div class="col-span-1 row-span-1 rounded-xl">
+          <img
+            class="w-full thumbnail rounded-xl"
+            src="./images/image-product-4.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="h-96 mb-5 md:hidden relative flex items-center">
+        <button class="prev-button absolute left-2 p-4 bg-white rounded-full">
+          <img
+            class="h-3 aspect-square"
+            src="./images/icon-previous.svg"
+            alt=""
+          />
+        </button>
+        <img
+          data-image="0"
+          class="mobile-image h-full w-full"
+          src="./images/image-product-1.jpg"
+          alt=""
+        />
+        <button class="next-button absolute right-2 p-4 bg-white rounded-full">
+          <img class="h-3 aspect-square" src="./images/icon-next.svg" alt="" />
+        </button>
+      </div>
+      <div class="flex justify-center flex-col mx-5 md:mx-0">
+        <p class="text-orange mb-4 text-sm">SNEAKER COMPANY</p>
+        <h1 class="font-bold text-3xl mb-7">Fall Limited Edition Sneakers</h1>
+        <p class="text-dark-grayish-blue mb-7">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable ruber outer sole, they'll withstand everything the
+          weather can offer.
+        </p>
+        <div class="flex flex-row space-x-5 mb-2">
+          <p class="font-bold text-2xl">$125.00</p>
+          <div class="flex justify-center items-center bg-pale-orange p-1">
+            <p class="text-orange text-sm">50%</p>
+          </div>
+        </div>
+        <p class="text-grayish-blue line-through mb-7">$250.00</p>
+        <div
+          class="flex flex-col space-y-4 mb-10 md:flex-row md:space-x-2 md:mb-0 md:space-y-0"
+        >
+          <div
+            class="flex items-center flex-row justify-between w-full md:w-2/5 bg-light-grayish-blue px-6 md:px-2 py-3 rounded-md"
+          >
+            <button class="h-full subtract-item hover:opacity-70">
+              <img src="./images/icon-minus.svg" alt="" />
+            </button>
+            <p class="item-quantity">0</p>
+            <button class="h-full add-item hover:opacity-70">
+              <img src="./images/icon-plus.svg" alt="" />
+            </button>
+          </div>
+          <button
+            class="add-to-cart flex items-center justify-center bg-orange text-white w-full md:w-3/5 rounded-md px-2 py-3 hover:opacity-80"
+          >
+            <img
+              class="mr-2 text-white"
+              src="./images/icon-cart-white.svg"
+              alt=""
+            />
+            <p class="text-sm">Add to cart</p>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hidden cart-popup absolute top-16 md:top-28 right-8 md:right-16 rounded-lg bg-white flex-col py-5 space-y-4"
+    >
+      <div class="px-5">
+        <p class="font-bold">Cart</p>
+      </div>
+      <div class="w-full h-0.5 bg-light-grayish-blue"></div>
+      <div class="empty-cart flex justify-center items-center h-32 px-5">
+        <p class="font-bold text-dark-grayish-blue">Your cart is empty.</p>
+      </div>
+      <div class="full-cart hidden flex-col px-5 space-y-4">
+        <div class="flex flex-row justify-between space-x-3 items-center">
+          <div class="">
+            <img
+              class="h-14 rounded-md aspect-square"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col">
+            <p class="">Fall Limited Edition Sneakers</p>
+            <p class="">
+              $125.00 * <span class="cart-item-quantity">0</span>
+              <span class="cart-item-total font-bold">$0.00</span>
+            </p>
+          </div>
+          <button class="cart-delete-button">
+            <img src="./images/icon-delete.svg" alt="" />
+          </button>
+        </div>
+        <button
+          class="flex items-center justify-center bg-orange text-white w-full md:w-full rounded-md px-2 py-3 hover:opacity-80"
+        >
+          <p class="text-sm">Checkout</p>
+        </button>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/myj009">Mohammad Jagora</a>.
+    </div>
+  </body>
+</html>
